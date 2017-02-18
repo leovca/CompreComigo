@@ -1,0 +1,29 @@
+<div layout="column" layout-align="center center" layout-fill="layout-fill" class="login-wrap">
+    <div class="loginBox md-whiteframe-z2" layout="column">
+        <form novalidate ng-submit="form.$valid && vm.autenticar()" name="form">
+            <md-content class="md-padding" layout="column">
+                <div layout-margin layout-padding>
+                    <div flex layout-align="center center" layout="row">
+                        <h2>NxAdmin</h2>
+                    </div>
+                    <md-input-container class="">
+                        <md-icon class="material-icons">account_circle</md-icon>
+                        <label>Usuário</label>
+                        <input type="text" ng-model="vm.credentials.email" required/>
+                    </md-input-container>
+                    <md-input-container>
+                        <md-icon class="material-icons">lock</md-icon>
+                        <label>Senha</label>
+                        <input type="password" ng-model="vm.credentials.password" required/>
+                    </md-input-container>
+                    <div layout="row" layout-align="center center">
+                        <md-button flex="100" type="submit" class="md-raised md-primary" ng-disabled="vm.inRequest">
+                            Autenticar
+                        </md-button>
+                    </div>
+                </div>
+            </md-content>
+            <md-progress-linear md-mode="query" ng-disabled="!vm.inRequest"></md-progress-linear>
+        </form>
+    </div>
+</div>

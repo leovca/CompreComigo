@@ -1,0 +1,58 @@
+<div layout="column" class="relative" layout-fill role="main">
+    <md-toolbar class="md-whiteframe-3dp" md-theme="toolbar">
+        <div class="container">
+            <div class="md-toolbar-tools ">
+                <span>
+                    <img src="/img/logo.png" width="25" id="appicon" style="vertical-align: middle;margin-bottom:5px;margin-right:10px;">
+                </span>
+                <h2 flex md-truncate>NxAdmin</h2>
+
+
+                <ul class="main-menus">
+                    <li>
+                        <a ui-sref="modules.dashboard">Principal</a>
+                    </li>
+                    <li>
+                        <a ui-sref="modules.companhias.list">Clientes</a>
+                    </li>
+                    <li>
+                        <a ui-sref="login">Sair</a>
+                    </li>
+                </ul>
+            </div>
+            <div ui-view="tabs"></div>
+        </div>
+    </md-toolbar>
+
+
+    <md-content flex md-scroll-y>
+        <div class="main no-padding">
+            <ui-view></ui-view>
+        </div>
+    </md-content>
+
+    <footer class="page-footer md-hue-2 " md-colors="{background: 'green'}">
+        <!--<div class="container">-->
+            <!--<div class="row">-->
+                <!--<div class="col-md-6">-->
+                    <!--<h3 class="white-text">Contato</h3>-->
+                    <!--<ul>-->
+                        <!--<li><a class="grey-text text-lighten-3" href="#!">Skype</a></li>-->
+                        <!--<li><a class="grey-text text-lighten-3" href="#!">Email</a></li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+                <!--<div class="col-md-6">-->
+                    <!--<h3 class="white-text">Links</h3>-->
+                    <!--<ul>-->
+                        <!--<li><a class="grey-text text-lighten-3" href="#!">No Google Play</a></li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <div class="footer-copyright">
+            <div class="container">
+                © 2017 Nexo Tecnologia
+            </div>
+        </div>
+    </footer>
+</div>

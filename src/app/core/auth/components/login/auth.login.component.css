@@ -1,0 +1,10 @@
+.login-wrap {
+       background-color: #8bc34a;
+}
+.loginBox {
+    max-width:  90%;
+}
+
+.stretch input  {
+    width: 100%;
+}
