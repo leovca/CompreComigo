@@ -1,10 +1,9 @@
 import angular from 'angular';
 import config from './dependencies.config';
-
 import uiRouter from 'angular-ui-router';
 
+import 'angularfire';
 import 'angular-material/angular-material.css';
-// import 'font-awesome/css/font-awesome.css';
 
 import angularMaterial from 'angular-material';
 import angularAnimate from 'angular-animate';
@@ -17,7 +16,8 @@ export default angular
         angularMaterial,
         angularAnimate,
         angularAria,
-        angularMessages
+        angularMessages,
+        'firebase'
     ])
     .config(config)
     .name;

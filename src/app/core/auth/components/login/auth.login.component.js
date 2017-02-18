@@ -4,10 +4,12 @@ export const AuthLoginComponent  = {
     template: require('./auth.login.component.html'),
     controllerAs: 'vm',
     controller: class AuthLoginComponent {
-        constructor($state) {
+        constructor($state, FirebaseService) {
             'ngInject'; // Not actually needed but best practice to keep here incase dependencies needed in the future
             this.$state = $state;
+            this.auth = FirebaseService.auth;
         }
+
 
         $onInit() {
             this.credentials = {
@@ -20,7 +22,8 @@ export const AuthLoginComponent  = {
 
         autenticar(){
             this.inRequest = true;
-            this.$auth.submitLogin(this.credentials)
+            this.auth
+                .signInWithEmailAndPassword(this.credentials.email, this.credentials.password)
                 .then(() => {
                     this.$state.go('modules.dashboard')
                 })
