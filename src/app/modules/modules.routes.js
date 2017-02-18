@@ -4,15 +4,20 @@ export default function routing(RouterHelper) {
         config: {
             abstract: true,
             parent: 'app',
-            // resolve: {
-            //     auth: ($auth, $state, $q) => {
-            //         let deferred = $q.defer();
-            //         $auth.validateUser()
-            //             .then(() => deferred.resolve())
-            //             .catch(() => $state.go('login'));
-            //         return deferred.promise;
-            //     }
-            // }
+            resolve: {
+                auth: (FirebaseService, $state, $q) => {
+                    let deferred = $q.defer();
+                    let user = FirebaseService.auth.currentUser;
+
+                    if (user) {
+                        deferred.resolve()
+                    } else {
+                        $state.go('login')
+                    }
+
+                    return deferred.promise;
+                }
+            }
         },
     }];
 
