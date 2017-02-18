@@ -5,7 +5,7 @@ export default function routing(RouterHelper) {
             abstract: true,
             views: {
                 '': {
-                    template: require('./component/layout.app.component.html')
+                    component: 'layoutAppComponent'
                 }
             }
 
