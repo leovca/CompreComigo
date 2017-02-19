@@ -4,27 +4,43 @@ export const AnnouncementPagamentoComponent  = {
     template: require('./announcements.pagamento.component.html'),
     controllerAs: 'vm',
     controller: class AnnouncementPagamentoComponent {
-        constructor(AnnouncementService) {
+        constructor(AnnouncementService, $scope, $stateParams) {
             'ngInject';
             this.announcementService = AnnouncementService;
+            this.$scope = $scope;
+            this.$stateParams = $stateParams;
         }
 
         $onInit() {
-            this.usersPayment = [{
-                image: 'https://s-media-cache-ak0.pinimg.com/736x/20/45/08/2045085b168394d854b2477b3fbca751.jpg',
-                name: 'Peppo Pig',
-                totalPayment: ''
-            },
-            {
-                image: 'http://vignette2.wikia.nocookie.net/parody/images/9/9a/STASC545-Peppa-Pig-Candy-Cat-Cutout_3.png/revision/latest?cb=20140423150749',
-                name: 'Candy Cat',
-                totalPayment: ''
-            },
-            {
-                image: 'http://orig03.deviantart.net/f3d1/f/2015/078/0/c/adventure_time_jake___animation__by_demoniumangel-d8mcmsm.gif',
-                name: 'Jake',
-                totalPayment: ''
-            }];
+            this.users = [];
+            this.announcementService.getUsers(this.$stateParams.id, (user)=> {
+                this.$scope.$apply(()=>{
+                    this.users.push(user);
+                });
+            });
+        }
+
+        save(){
+            angular.forEach(this.users, (value, key)=>{
+                    this.announcementService.setValue(
+                        this.$stateParams.id,
+                        value.key,
+                        value.value
+                    )
+            });
+        }
+
+
+        getTotal(){
+            let total = 0;
+
+            angular.forEach(this.users||[], (value, key)=>{
+                if(value) {
+                    total += (value.value || 0)
+                }
+            });
+
+            return total;
         }
     }
 };

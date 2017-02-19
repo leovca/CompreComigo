@@ -6,7 +6,7 @@
     </div>
 </div>
 
-<md-card md-theme-watch ng-repeat="announcement in vm.announcements">
+<md-card md-theme-watch ng-repeat="announcement in vm.announcements" ng-if="vm.showAnnouncment(announcement)">
     <md-card-title>
         <md-card-title-media>
             <div class="md-media-sm card-media">
@@ -19,7 +19,7 @@
         </md-card-title-text>
     </md-card-title>
     <md-card-actions layout="row" layout-align="end center">
-        <md-button><md-icon class="material-icons">share</md-icon>Indicar</md-button>
+
         <md-button ng-click="vm.join(announcement)"><md-icon class="material-icons">check</md-icon>Participar</md-button>
     </md-card-actions>
 </md-card>
