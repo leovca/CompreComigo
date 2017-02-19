@@ -1,6 +1,8 @@
 <div class="row">
     <div class="col-xs-12">
-        <ng-map center="current"></ng-map>
+        <ng-map id="dashboardMap" center="current">
+            <marker ng-repeat="point in vm.users" position="{{point}}"></marker>
+        </ng-map>
     </div>
 </div>
 
@@ -8,11 +10,12 @@
     <md-card-title>
         <md-card-title-media>
             <div class="md-media-sm card-media">
-                <img ng-src="{{announcement.photo}}" class="md-card-image" alt="{{announcement.userName}}">
+                <img ng-src="{{announcement.user.photoURL}}" class="md-card-image" alt="{{announcement.user.name}}">
             </div>
         </md-card-title-media>
         <md-card-title-text>
-            <span class="md-subhead"><strong>{{announcement.userName}}</strong> {{announcement.title}} {{announcement.message}}</span>
+            <span class="md-subhead"><strong>{{announcement.user.name}}</strong> {{vm.getAnnouncementMessage(announcement.type)}} {{announcement.title}}
+            </span>
         </md-card-title-text>
     </md-card-title>
     <md-card-actions layout="row" layout-align="end center">

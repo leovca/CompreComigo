@@ -9,10 +9,8 @@ export const ProfileEditComponent  = {
         constructor(ProfileService, NgMap) {
             'ngInject';
             this.profileService = ProfileService;
-            this.map = NgMap.getMap();
+            this.map = NgMap.getMap({id: 'editProfile'});
         }
-
-
 
         $onInit() {
             this.profileService.getUserProfile().then(
@@ -30,7 +28,6 @@ export const ProfileEditComponent  = {
 
                     this.map.then((map)=>{
                         this.myMap = map;
-
 
                         if(this.user.pointer && this.user.pointer.lat){
                             this.myPosition = [this.user.pointer.lat, this.user.pointer.lng]

@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "paguecomigo",
+  "private_key_id": "1a5fe27ce963a3363c463723c85067c7ddc19e25",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC47U5wx/WZVJIq\ncLdjtgeqoSBdgQ6Foud10DuAq4Aq24fm8aajStArg7Ktu0JGRJ9v82XhUCOuyhlL\n3BUVemQns7K2CnGvrigk4zcvU+jjS467l+aeJxblx957+lawmC+owXi+FlBf8dBr\n2edb9wteqckJl7GPCZbKlNtO0uDh5VH0/bOcsGXN62Xlj9nCNl7ZE0bK3G3YVIYr\nn33ZGY+gNpK2kPis8xNJUTI6G/VWwPozT4tgPVUyi8XqADM2AxLOmDv/cP8REi78\nXUaykFLgnHOThjaDPkrFDIRHmDIjKvF0tCs4PGfVgDcRPRI5JbNkpNNnizeQqFuB\naPMcXKjNAgMBAAECggEAfI/b9ju6Qr2kdtHVtWQ3ZceCdXkovvsrzT+l1NWwTy3w\nLK84/2S1M5pSEJPB4HL4sf/Q8CN65ZFb2K01xnHaZKO2DMicKym0AKTL1yU+CVwr\nmFCJFp5d3gjy46+MFQdtks4+9ksxeG75ZKwyGtAc6HaU49E52I8s8uexkTaaI42e\nQOPAMIetHh8auW+dS+weXZ3wgiGNCsf21GHggGCgAKm94EGv5Sbf29ClB9soHnCA\n8iBZv7zMSO1Qlbf5uLfLPm0vqxC8J6/YrqlXP/LFKSDjUF3WidBJ5k8ichIRfbBq\nGi/aPrlGHnp7F12oEh/ekAVb+ZIKK/OUhu9g2UksQQKBgQDmOv8xpXGuSFVFcX+G\nXEu1F90LttZoUNUCcFhRPlSGCpyCj7WiCesjmdg/GHb2VUaUk9eB1msXm7e2mgRi\nIBtu7DCZjs+5rhtCLvqMtzzhfdtpJHrBFAYabYhQVY0D52fAHMeuLCz0twoHn5PJ\ngtL7/ve8eXO4es9glig3v/KKkwKBgQDNoDAMwC0xmKE1vrKSVXBPUtECwYYSojEZ\nmqjCEl2rlVwW9cZeHOoHm+Q09giOlbO+ODBt7wOgX9e3VSFOWCVp2zYY4aR6Cnf9\na3u+qPcuyc48t5kDE4GP39x8UALPIMAV6OR7qd78lbCV9pMcdDZpjJ/AXaIxEBuZ\nPuyfGno7HwKBgDVCprCcfmz8DMXw2LiDd3wgViGUnYsqT+ytgrDgw3ryz3wgtLsU\nolHtECqghTy9Q4Oxo+REbyfZ/Sj//k2Y8d+6Qg/0CrgAwAuShKGy7iGYFP8A0mkC\nMdtBRYyYDfQ+PzEhN0xiqc++3FIhJ3Yxjo9/T15Jlmyx9HF6qzkibYCDAoGBAIrA\ngAvqldR0uLuqfZcO/iUYrh8c9VqXhWhQm3WxrPF+bNC1cfDJtAYEZJ50Mtv8GnjO\nM6fK8/iBE/ALCtlx03U1zbBGepU7gTJJGAxUuc8hr//6p86SmAe8uGxOFUctQ1DF\ngYAM5YIthCX9Z9F4fcsFcDr/M9XFl8n10vedh0NjAoGAZkCnKrO9l3i5ysEqHQJG\nt6HH6ynUPbDe4ZvbBV1DzFodIYaKp+XHC0EafAFrIeuKKLSqDRmJAVc3S50SE7rV\nhJuE/XgIf2IV8S6cjn5SZrXHdoMLx+k0wcs3gOgyX4ZXOsedxCzvKT5Mnvrn47CM\nIUSYgPfyCOI4nfntsrSPOvA=\n-----END PRIVATE KEY-----\n",
+  "client_email": "paguecomigo@paguecomigo.iam.gserviceaccount.com",
+  "client_id": "116485428354257439672",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/paguecomigo%40paguecomigo.iam.gserviceaccount.com"
+}
