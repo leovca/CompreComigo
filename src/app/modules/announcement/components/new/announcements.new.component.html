@@ -18,16 +18,16 @@
         </div>
         <div class="row">
             <div class="col-xs-8 col-xs-offset-2">
-                <md-radio-group layout="row">
-                    <md-radio-button value=0 class="md-primary">Público</md-radio-button>
-                    <md-radio-button value=1 class="md-primary">Privado</md-radio-button>
+                <md-radio-group layout="row" ng-model="vm.announcement.visibility">
+                    <md-radio-button ng-value="0" class="md-primary">Público</md-radio-button>
+                    <md-radio-button ng-value="1" class="md-primary">Privado</md-radio-button>
                 </md-radio-group>
             </div>
         </div>
         <div class="row">
             <div class="col-xs-8 col-xs-offset-2">
                 <md-card-actions layout="row" layout-align="end center">
-                    <md-button flex="100" type="submit" class="md-raised md-primary save-announcement-button" id="save-announcement-button">
+                    <md-button ng-click="vm.save()" flex="100" type="submit" class="md-raised md-primary save-announcement-button" id="save-announcement-button">
                         Salvar
                     </md-button>
                 </md-card-actions>

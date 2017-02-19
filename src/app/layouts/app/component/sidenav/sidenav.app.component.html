@@ -12,6 +12,15 @@
     </md-toolbar>
 
     <md-list ng-click="vm.toggleSidenav()">
+        <md-list-item class="md-2-line" ui-sref="modules.dashboard">
+            <md-item-content md-ink-ripple layout="row" layout-align="start center">
+                <div class="inset">
+                    <md-icon><i class="material-icons">dashboard</i></md-icon>
+                </div>
+                <div class="inset">Principal</div>
+            </md-item-content>
+        </md-list-item>
+
         <md-list-item class="md-2-line" ui-sref="modules.profile.edit">
             <md-item-content md-ink-ripple layout="row" layout-align="start center">
                 <div class="inset">
