@@ -4,11 +4,12 @@ export const AnnouncementPagamentoComponent  = {
     template: require('./announcements.pagamento.component.html'),
     controllerAs: 'vm',
     controller: class AnnouncementPagamentoComponent {
-        constructor(AnnouncementService, $scope, $stateParams) {
+        constructor(AnnouncementService, $scope, $stateParams, $state) {
             'ngInject';
             this.announcementService = AnnouncementService;
             this.$scope = $scope;
             this.$stateParams = $stateParams;
+            this.$state = $state;
         }
 
         $onInit() {
