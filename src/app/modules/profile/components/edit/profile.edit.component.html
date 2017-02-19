@@ -2,7 +2,7 @@
     <md-card-content>
         <div class="row">
             <div class="col-xs-12 text-center">
-                <img class="md-card-avatar-profile md-card-avatar" src="https://yt3.ggpht.com/-oSAbz46-1qw/AAAAAAAAAAI/AAAAAAAAAAA/UzFF1NAQRSo/s900-c-k-no-mo-rj-c0xffffff/photo.jpg">
+                <img class="md-card-avatar-profile md-card-avatar" ng-src="{{vm.user.photoURL}}">
             </div>
         </div>
         <div class="row">
@@ -12,14 +12,14 @@
         </div>
         <div class="row">
             <div class="col-xs-12 text-center">
-                <p>peppa@peppa.com</p>
+                <p>{{vm.user.email}}</p>
             </div>
         </div>
         <div class="row">
             <div class="col-xs-8 col-xs-offset-2">
                 <md-input-container class="md-icon-float md-block">
                     <label>Nome</label>
-                    <input type="text" ng-model="vm.user_data.name" required/>
+                    <input type="text" ng-model="vm.user.name" required/>
                 </md-input-container>
             </div>
         </div>
@@ -27,17 +27,21 @@
             <div class="col-xs-8 col-xs-offset-2">
                 <md-input-container class="md-icon-float md-block">
                     <label>Endereço</label>
-                    <input type="text" ng-model="vm.user_data.address" required/>
+                    <input type="text" ng-model="vm.user.address" required/>
                 </md-input-container>
             </div>
         </div>
         <div class="row">
-            <div class="col-xs-12">
-                <ng-map center="{{vm.user_data.address}}">
-                    <custom-marker id="start"
-                                   position="{{vm.user_data.address}}">
-                    </custom-marker>
+            <div class="col-xs-10 col-xs-offset-1">
+                <ng-map  center="{{vm.myPosition}}">
+                    <marker draggable="true" id="pointer"  position="{{vm.myPosition}}" >
                 </ng-map>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <button class="btn btn-primary" ng-click="vm.save()">Salvar</button>
             </div>
         </div>
     </md-card-content>

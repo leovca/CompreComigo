@@ -3,10 +3,10 @@
 
     <md-toolbar class="md-tall md-hue-2">
         <span flex></span>
-        <div layout="column" class="md-toolbar-tools-bottom inset">
-            <user-avatar></user-avatar>
+        <div layout="column" class="md-toolbar-tools-bottom inset side-bar-user-profile">
+            <img height="64" width="64" ng-src="{{vm.user.photoURL}}" />
             <span></span>
-            <div>{{vm.user.name}}</div>
+            <div>{{vm.user.displayName}}</div>
             <div>{{vm.user.email}}</div>
         </div>
     </md-toolbar>

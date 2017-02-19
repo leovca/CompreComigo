@@ -16,13 +16,13 @@ export default function routing(RouterHelper) {
                 auth: (FirebaseService, $state, $q) => {
                     let deferred = $q.defer();
                     let user = FirebaseService.auth.currentUser;
-                    deferred.resolve();
+                    // deferred.resolve();
 
-                    // if (user) {
-                    //     deferred.resolve()
-                    // } else {
-                    //     $state.go('login')
-                    // }
+                    if (user) {
+                        deferred.resolve()
+                    } else {
+                        $state.go('login')
+                    }
 
                     return deferred.promise;
                 }

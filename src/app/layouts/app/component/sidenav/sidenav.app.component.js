@@ -16,7 +16,6 @@ export const SidenavLayoutAppComponent  = {
             this.profileService.getUserProfile().then(
                 (user) => {
                     this.user = user;
-                    console.log(user)
                 })
         }
 

@@ -2,7 +2,7 @@
     <ui-view name="sidenav"></ui-view>
 
     <div layout="column" class="relative" layout-fill>
-        <md-button class="md-fab md-fab-bottom-right" aria-label="Add" ng-click="vm.showAdd($event)">
+        <md-button class="md-fab md-fab-bottom-right" aria-label="Add" ui-sref="modules.announcements.new">
             <md-icon><i class="material-icons">add</i></md-icon>
         </md-button>
         <md-toolbar ng-show="!showSearch" class="md-whiteframe-3dp">
@@ -11,7 +11,7 @@
                     <md-icon><i class="material-icons">menu</i></md-icon>
                 </md-button>
                 <h3>
-                    Dashboard
+                    Pague Comigo
                 </h3>
                 <span flex></span>
                 <md-button aria-label="Search" ng-click="showSearch = !showSearch">
