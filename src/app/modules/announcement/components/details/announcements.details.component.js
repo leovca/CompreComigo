@@ -12,7 +12,9 @@ export const AnnouncementDetailsComponent  = {
 
         $onInit() {
             console.log(this.$stateParams);
-            // this.announcemente = this.announcementService.get()
+            this.announcementService.get(this.$stateParams.id).then((announcment)=>{
+                this.announcement = announcment;
+            })
         }
 
     }

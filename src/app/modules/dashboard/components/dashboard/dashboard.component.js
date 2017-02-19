@@ -33,7 +33,7 @@ export const DashboardComponent  = {
         join(announcement) {
             this.announcementService.join(announcement)
                 .then(()=>{
-                    this.$state.go('modules.announcements.show', {id: announcement.key})
+                    this.$state.go('modules.announcements.show.details', {id: announcement.key})
                 })
         }
 
