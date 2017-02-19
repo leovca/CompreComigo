@@ -40,7 +40,7 @@ export const DashboardComponent  = {
         showAnnouncment(announcement){
             if(announcement && !announcement.users){
                 return true;
-            } else if(announcement && !announcement.users &&
+            } else if(announcement && announcement.users &&
                 !announcement.users.hasOwnProperty(this.firebaseService.auth.currentUser.uid)) {
                 return true;
             } else {
