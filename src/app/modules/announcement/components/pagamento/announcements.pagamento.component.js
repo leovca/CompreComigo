@@ -10,11 +10,20 @@ export const AnnouncementPagamentoComponent  = {
         }
 
         $onInit() {
-            this.announcemente = [{
-                photo: 'https://s-media-cache-ak0.pinimg.com/736x/20/45/08/2045085b168394d854b2477b3fbca751.jpg',
-                userName: 'Peppo Pig',
-                title: 'está procurando alguém para',
-                message: 'é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.'
+            this.usersPayment = [{
+                image: 'https://s-media-cache-ak0.pinimg.com/736x/20/45/08/2045085b168394d854b2477b3fbca751.jpg',
+                name: 'Peppo Pig',
+                totalPayment: ''
+            },
+            {
+                image: 'http://vignette2.wikia.nocookie.net/parody/images/9/9a/STASC545-Peppa-Pig-Candy-Cat-Cutout_3.png/revision/latest?cb=20140423150749',
+                name: 'Candy Cat',
+                totalPayment: ''
+            },
+            {
+                image: 'http://orig03.deviantart.net/f3d1/f/2015/078/0/c/adventure_time_jake___animation__by_demoniumangel-d8mcmsm.gif',
+                name: 'Jake',
+                totalPayment: ''
             }];
         }
     }
