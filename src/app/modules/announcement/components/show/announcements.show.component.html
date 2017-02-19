@@ -1,18 +1,12 @@
-<div class="row">
-    <div class="col-xs-12">
-        <ng-map center="current"></ng-map>
-    </div>
-</div>
-
-<md-card md-theme-watch ng-repeat="announcement in vm.announcements">
+<md-card md-theme-watch>
     <md-card-title>
         <md-card-title-media>
             <div class="md-media-sm card-media">
-                <img ng-src="{{announcement.photo}}" class="md-card-image" alt="{{announcement.userName}}">
+                <img ng-src="{{vm.currentAnnouncement.photo}}" class="md-card-image" alt="{{vm.currentAnnouncement.userName}}">
             </div>
         </md-card-title-media>
         <md-card-title-text>
-            <span class="md-subhead"><strong>{{announcement.userName}}</strong> {{announcement.title}} {{announcement.message}}</span>
+            <span class="md-subhead"><strong>{{vm.announcement.userName}}</strong> {{vm.currentAnnouncement.title}} {{vm.currentAnnouncement.message}}</span>
         </md-card-title-text>
     </md-card-title>
     <md-card-actions layout="row" layout-align="end center">

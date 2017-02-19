@@ -17,6 +17,13 @@ export default function routing(RouterHelper) {
                 url: '/new',
                 component: 'announcementNewComponent'
             }
+        },
+        {
+            state: 'modules.announcements.show',
+            config: {
+                url: '/show',
+                component: 'announcementShowComponent'
+            }
         }
     ];
 
