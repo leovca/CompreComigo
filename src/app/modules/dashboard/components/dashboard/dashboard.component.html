@@ -1,4 +1,9 @@
 <div class="row">
+    <div class="col-lg-12 text-center">
+        <h3>Meus Vizinhos</h3>
+    </div>
+</div>
+<div class="row">
     <div class="col-xs-12">
         <ng-map id="dashboardMap" center="current">
             <marker ng-repeat="point in vm.users" position="{{point}}"></marker>
