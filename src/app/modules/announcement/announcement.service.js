@@ -41,7 +41,8 @@ export class AnnouncementService {
             .child(id)
             .once('value', (announcement) => {
                 let announcementTemp = announcement.val();
-                announcementTemp.key = announcement.key;
+                if(announcement)
+                    announcementTemp.key = announcement.key;
                 defer.resolve(announcementTemp)
             });
 

@@ -11,20 +11,30 @@
     </div>
 </div>
 
-<md-card md-theme-watch ng-repeat="announcement in vm.announcements" ng-if="vm.showAnnouncment(announcement)">
-    <md-card-title>
-        <md-card-title-media>
-            <div class="md-media-sm card-media">
-                <img ng-src="{{announcement.user.photoURL}}" class="md-card-image" alt="{{announcement.user.name}}">
-            </div>
-        </md-card-title-media>
-        <md-card-title-text>
+<div class="row" style="margin-top: 20px">
+
+    <div class="col-lg-12">
+
+        <md-card md-theme-watch ng-repeat="announcement in vm.announcements" ng-if="vm.showAnnouncment(announcement)">
+            <md-card-title>
+                <md-card-title-media>
+                    <div class="md-media-sm card-media">
+                        <img ng-src="{{announcement.user.photoURL}}" class="md-card-image"
+                             alt="{{announcement.user.name}}">
+                    </div>
+                </md-card-title-media>
+                <md-card-title-text>
             <span class="md-subhead"><strong>{{announcement.user.name}}</strong> {{vm.getAnnouncementMessage(announcement.type)}} {{announcement.title}}
             </span>
-        </md-card-title-text>
-    </md-card-title>
-    <md-card-actions layout="row" layout-align="end center">
+                </md-card-title-text>
+            </md-card-title>
+            <md-card-actions layout="row" layout-align="end center">
 
-        <md-button ng-click="vm.join(announcement)"><md-icon class="material-icons">check</md-icon>Participar</md-button>
-    </md-card-actions>
-</md-card>
+                <md-button ng-click="vm.join(announcement)">
+                    <md-icon class="material-icons">check</md-icon>
+                    Participar
+                </md-button>
+            </md-card-actions>
+        </md-card>
+    </div>
+</div>
