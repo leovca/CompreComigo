@@ -1,1 +1,6 @@
-users
+<md-list>
+    <md-list-item ng-repeat="chatUser in vm.chatUsers" class="noright">
+        <img alt="{{chatUser.name}}" ng-src="{{chatUser.image}}" class="md-avatar"/>
+        <p>{{chatUser.name}}</p>
+    </md-list-item>
+</md-list>
