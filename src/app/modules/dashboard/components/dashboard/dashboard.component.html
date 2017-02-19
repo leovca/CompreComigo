@@ -1,18 +1,22 @@
-<div class="section white no-pad-top">
-    <div class="section light-green darken-1 no-pad-bot z-depth-1 start-splash-section">
-        <div class="container start-splash-container section-header">
-            <div class="row">
-                <div class="col s12">
-                    <h4>Dashboard</h4>
-                </div>
+<div class="row">
+    <div class="col-xs-12">
+        <ng-map center="current"></ng-map>
+    </div>
+</div>
+
+<md-card md-theme-watch ng-repeat="announcement in vm.announcements">
+    <md-card-title>
+        <md-card-title-media>
+            <div class="md-media-sm card-media">
+                <img ng-src="{{announcement.photo}}" class="md-card-image" alt="{{announcement.userName}}">
             </div>
-        </div>
-    </div>
-</div>
-<div class="container">
-    <div class="row">
-        <div class="col s12">
-                Teste teste
-        </div>
-    </div>
-</div>
+        </md-card-title-media>
+        <md-card-title-text>
+            <span class="md-subhead"><strong>{{announcement.userName}}</strong> {{announcement.title}} {{announcement.message}}</span>
+        </md-card-title-text>
+    </md-card-title>
+    <md-card-actions layout="row" layout-align="end center">
+        <md-button><md-icon class="material-icons">share</md-icon>Indicar</md-button>
+        <md-button><md-icon class="material-icons">check</md-icon>Participar</md-button>
+    </md-card-actions>
+</md-card>
