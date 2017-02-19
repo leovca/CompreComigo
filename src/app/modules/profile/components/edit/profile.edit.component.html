@@ -34,14 +34,17 @@
         <div class="row">
             <div class="col-xs-10 col-xs-offset-1">
                 <ng-map  center="{{vm.myPosition}}">
-                    <marker draggable="true" id="pointer"  position="{{vm.myPosition}}" >
+                    <marker draggable="true" id="pointer"  position="{{vm.myPosition}}"></marker>
                 </ng-map>
             </div>
         </div>
-
         <div class="row">
-            <div class="col-lg-12 text-center">
-                <button class="btn btn-primary" ng-click="vm.save()">Salvar</button>
+            <div class="col-xs-6 col-xs-offset-3">
+                <div layout="row" layout-align="center center">
+                    <md-button flex="100" type="submit" class="md-raised md-primary save-user-edit-button">
+                        Salvar
+                    </md-button>
+                </div>
             </div>
         </div>
     </md-card-content>
