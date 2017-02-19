@@ -21,8 +21,61 @@ export default function routing(RouterHelper) {
         {
             state: 'modules.announcements.show',
             config: {
-                url: '/show',
-                component: 'announcementShowComponent'
+                url: '/show/{id}',
+                views: {
+                    '': {
+                        component: 'announcementShowComponent'
+                    }
+                }
+
+            }
+        },
+        {
+            state: 'modules.announcements.show.details',
+            config: {
+                url: '/details',
+                views: {
+                    '': {
+                        component: 'announcementDetailsComponent'
+                    }
+                }
+
+            }
+        },
+        {
+            state: 'modules.announcements.show.users',
+            config: {
+                url: '/users',
+                views: {
+                    '': {
+                        component: 'announcementUsersComponent'
+                    }
+                }
+
+            }
+        },
+        {
+            state: 'modules.announcements.show.chat',
+            config: {
+                url: '/chat',
+                views: {
+                    '': {
+                        component: 'announcementChatComponent'
+                    }
+                }
+
+            }
+        },
+        {
+            state: 'modules.announcements.show.pagamento',
+            config: {
+                url: '/pagamento',
+                views: {
+                    '': {
+                        component: 'announcementPagamentoComponent'
+                    }
+                }
+
             }
         },
         {

@@ -3,7 +3,11 @@ export default function routing(RouterHelper) {
         state: 'modules.dashboard',
         config: {
             url: '/',
-            component: 'dashboardComponent'
+            views: {
+                '': {
+                    component: 'dashboardComponent'
+                }
+            }
         },
     }];
 

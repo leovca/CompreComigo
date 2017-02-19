@@ -1,9 +1,9 @@
-import './announcements.chat.component.css';
+import './announcements.users.component.css';
 
-export const AnnouncementChatComponent  = {
-    template: require('./announcements.chat.component.html'),
+export const AnnouncementUsersComponent  = {
+    template: require('./announcements.users.component.html'),
     controllerAs: 'vm',
-    controller: class AnnouncementChatComponent {
+    controller: class AnnouncementUsersComponent {
         constructor(AnnouncementService) {
             'ngInject';
             this.announcementService = AnnouncementService;

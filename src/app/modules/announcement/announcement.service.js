@@ -14,6 +14,17 @@ export class AnnouncementService {
         })
     }
 
+    join(announcement){
+        let user = this.firebaseService.auth.currentUser;
+
+        return this.firebaseService.ref
+            .child('announcements')
+            .child(announcement.key)
+            .child('users')
+            .child(user.uid).set({accept: true})
+
+    }
+
     getMyInvintesStream(callback){
         let user = this.firebaseService.auth.currentUser;
 
@@ -31,6 +42,7 @@ export class AnnouncementService {
                             .once('value', (userData)=>{
                                 timeLineEvent.type = snapshot.val().type;
                                 timeLineEvent.user = userData.val();
+                                timeLineEvent.key = eventSnapshot.key;
                                 callback(timeLineEvent);
                             });
 

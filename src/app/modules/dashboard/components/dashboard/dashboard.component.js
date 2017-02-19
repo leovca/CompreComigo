@@ -4,11 +4,12 @@ export const DashboardComponent  = {
     template: require('./dashboard.component.html'),
     controllerAs: 'vm',
     controller: class DashboardComponent {
-        constructor(ProfileService, $scope, AnnouncementService) {
+        constructor(ProfileService, $scope, AnnouncementService, $state) {
             'ngInject';
             this.profileService = ProfileService;
             this.announcementService = AnnouncementService;
             this.$scope = $scope;
+            this.$state = $state;
         }
 
         $onInit() {
@@ -29,6 +30,12 @@ export const DashboardComponent  = {
             });
         }
 
+        join(announcement) {
+            this.announcementService.join(announcement)
+                .then(()=>{
+                    this.$state.go('modules.announcements.show', {id: announcement.key})
+                })
+        }
 
         getAnnouncementMessage(type){
             if(type == 'near'){

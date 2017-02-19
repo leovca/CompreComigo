@@ -1,16 +1,36 @@
-<md-card md-theme-watch>
-    <md-card-title>
-        <md-card-title-media>
-            <div class="md-media-sm card-media">
-                <img ng-src="{{vm.currentAnnouncement.photo}}" class="md-card-image" alt="{{vm.currentAnnouncement.userName}}">
-            </div>
-        </md-card-title-media>
-        <md-card-title-text>
-            <span class="md-subhead"><strong>{{vm.announcement.userName}}</strong> {{vm.currentAnnouncement.title}} {{vm.currentAnnouncement.message}}</span>
-        </md-card-title-text>
-    </md-card-title>
-    <md-card-actions layout="row" layout-align="end center">
-        <md-button><md-icon class="material-icons">share</md-icon>Indicar</md-button>
-        <md-button ui-sref="modules.announcements.chat"><md-icon class="material-icons">check</md-icon>Entrar no chat</md-button>
-    </md-card-actions>
-</md-card>
+<!--<md-card md-theme-watch>-->
+    <!--<md-card-title>-->
+        <!--<md-card-title-media>-->
+            <!--<div class="md-media-sm card-media">-->
+                <!--<img ng-src="{{vm.currentAnnouncement.photo}}" class="md-card-image" alt="{{vm.currentAnnouncement.userName}}">-->
+            <!--</div>-->
+        <!--</md-card-title-media>-->
+        <!--<md-card-title-text>-->
+            <!--<span class="md-subhead"><strong>{{vm.announcement.userName}}</strong> {{vm.currentAnnouncement.title}} {{vm.currentAnnouncement.message}}</span>-->
+        <!--</md-card-title-text>-->
+    <!--</md-card-title>-->
+    <!--<md-card-actions layout="row" layout-align="end center">-->
+        <!--<md-button><md-icon class="material-icons">share</md-icon>Indicar</md-button>-->
+        <!--<md-button ui-sref="modules.announcements.chat"><md-icon class="material-icons">check</md-icon>Entrar no chat</md-button>-->
+    <!--</md-card-actions>-->
+<!--</md-card>-->
+<md-nav-bar
+        md-selected-nav-item="currentNavItem"
+        nav-bar-aria-label="navigation links">
+    <md-nav-item md-nav-sref="modules.announcements.show.details" name="page1">
+        Detalhes
+    </md-nav-item>
+    <md-nav-item md-nav-sref="modules.announcements.show.users" name="page2">
+        Usuários
+    </md-nav-item>
+    <md-nav-item md-nav-sref="modules.announcements.show.chat" name="page3">
+        Chat
+    </md-nav-item>
+    <md-nav-item md-nav-sref="modules.announcements.show.pagamento" name="page4">
+        Pagamento
+    </md-nav-item>
+
+</md-nav-bar>
+<div class="ext-content">
+    <ui-view></ui-view>
+</div>
