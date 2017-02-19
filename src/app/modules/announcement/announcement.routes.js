@@ -91,6 +91,13 @@ export default function routing(RouterHelper) {
                 url: '/groups',
                 component: 'announcementGroupsComponent'
             }
+        },
+        {
+            state: 'modules.announcements.payment',
+            config: {
+                url: '/payment',
+                component: 'announcementPaymentComponent'
+            }
         }
     ];
 

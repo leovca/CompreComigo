@@ -1,0 +1,44 @@
+<md-card>
+    <md-card-content>
+        <md-content class="md-no-momentum">
+            <md-input-container class="md-icon-float md-block">
+                <label>Nome Completo (Igual está impresso no cartão)</label>
+                <md-icon><i class="material-icons">person</i></md-icon>
+                <input ng-model="payment.cardFullName" type="text">
+            </md-input-container>
+            <md-input-container class="md-icon-float md-block">
+                <label>Número do Cartão</label>
+                <md-icon><i class="material-icons">credit_card</i></md-icon>
+                <input ng-model="payment.cardNumber" type="text">
+            </md-input-container>
+            <div layout-gt-sm="row">
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>CVC</label>
+                    <input md-maxlength="3" required ng-model="payment.cvc"/>
+                </md-input-container>
+                <div flex="5" hide-xs hide-sm>
+                </div>
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>Vencimento</label>
+                    <md-datepicker ng-model="payment.expirationDate" md-placeholder=""
+                                   md-min-date="today"></md-datepicker>
+                </md-input-container>
+            </div>
+            <md-divider></md-divider>
+            <div class="row">
+                <div class="col-xs-12 text-right value-total-payment">
+                    Total: R$ 500
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6 col-xs-offset-3">
+                    <div layout="row" layout-align="center center">
+                        <md-button flex="100" ng-click="vm.save()" type="submit" class="md-raised md-primary save-users-payment-button">
+                            Finalizar Pagamento
+                        </md-button>
+                    </div>
+                </div>
+            </div>
+        </md-content>
+    </md-card-content>
+</md-card>

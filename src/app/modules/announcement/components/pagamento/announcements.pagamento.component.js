@@ -42,5 +42,9 @@ export const AnnouncementPagamentoComponent  = {
 
             return total;
         }
+
+        save(){
+            this.$state.go('modules.announcements.payment')
+        }
     }
 };
