@@ -1,6 +1,7 @@
 import angular from 'angular';
 import config from './dependencies.config';
 import uiRouter from 'angular-ui-router';
+import ngMap from 'ngmap'
 
 import 'angularfire';
 import 'angular-material/angular-material.css';
@@ -17,7 +18,8 @@ export default angular
         angularAnimate,
         angularAria,
         angularMessages,
-        'firebase'
+        'firebase',
+        ngMap
     ])
     .config(config)
     .name;
