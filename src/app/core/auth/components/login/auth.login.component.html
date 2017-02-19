@@ -21,6 +21,11 @@
                             Autenticar
                         </md-button>
                     </div>
+                    <div layout="row" layout-align="center center">
+                        <md-button flex="100" ng-click="vm.register()" type="button" class="md-raised md-secondary" ng-disabled="vm.inRequest">
+                            Registrar
+                        </md-button>
+                    </div>
                 </div>
             </md-content>
             <md-progress-linear md-mode="query" ng-disabled="!vm.inRequest"></md-progress-linear>

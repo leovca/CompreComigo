@@ -20,6 +20,16 @@ export const AuthLoginComponent  = {
             this.inRequest = false;
         }
 
+        register(){
+            this.auth
+                .createUserWithEmailAndPassword(this.credentials.email, this.credentials.password)
+                .catch(function(error) {
+                    console.log(error)
+                }).then(() => {
+                    this.$state.go('modules.dashboard')
+                })
+        }
+
         autenticar(){
             this.inRequest = true;
             this.auth
