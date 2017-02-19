@@ -10,7 +10,7 @@ export const AnnouncementShowComponent  = {
         }
 
         $onInit() {
-            this.announcemente = [{
+            this.announcement = [{
                 photo: 'https://s-media-cache-ak0.pinimg.com/736x/20/45/08/2045085b168394d854b2477b3fbca751.jpg',
                 userName: 'Peppo Pig',
                 title: 'está procurando alguém para',

@@ -24,6 +24,20 @@ export default function routing(RouterHelper) {
                 url: '/show',
                 component: 'announcementShowComponent'
             }
+        },
+        {
+            state: 'modules.announcements.chat',
+            config: {
+                url: '/chat',
+                component: 'announcementChatComponent'
+            }
+        },
+        {
+            state: 'modules.announcements.groups',
+            config: {
+                url: '/groups',
+                component: 'announcementGroupsComponent'
+            }
         }
     ];
 

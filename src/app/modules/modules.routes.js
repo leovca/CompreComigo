@@ -18,7 +18,7 @@ export default function routing(RouterHelper) {
                     let user = FirebaseService.auth.currentUser;
                     // deferred.resolve();
 
-                    if (user) {
+                    if (!user) {
                         deferred.resolve()
                     } else {
                         $state.go('login')

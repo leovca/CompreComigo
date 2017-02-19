@@ -1,12 +1,12 @@
-<md-card md-theme-watch>
+<md-card md-theme-watch ng-repeat="group in vm.groups">
     <md-card-title>
         <md-card-title-media>
             <div class="md-media-sm card-media">
-                <img ng-src="{{vm.currentAnnouncement.photo}}" class="md-card-image" alt="{{vm.currentAnnouncement.userName}}">
+                <img ng-src="{{group.photo}}" class="md-card-image" alt="{{group.ownerName}}">
             </div>
         </md-card-title-media>
         <md-card-title-text>
-            <span class="md-subhead"><strong>{{vm.announcement.userName}}</strong> {{vm.currentAnnouncement.title}} {{vm.currentAnnouncement.message}}</span>
+            <span class="md-subhead"><strong>{{group.ownerName}}</strong> {{group.title}} {{group.message}}</span>
         </md-card-title-text>
     </md-card-title>
     <md-card-actions layout="row" layout-align="end center">

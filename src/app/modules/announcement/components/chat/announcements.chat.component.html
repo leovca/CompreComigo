@@ -1,0 +1,25 @@
+<div layout="row" flex>
+    <md-content id="chat-content">
+        <md-list>
+            <md-list-item ng-repeat="message in vm.messages" style="margin-top: 8px; margin-bottom: 8px;">
+                <div layout="column" layout-align="center center" class="md-caption">
+                    <img layout="row" style="margin-right: 3px;" ng-src="{{message.avatar}}" class="md-avatar"></img>
+                    <div style="text-align: center; color: #5F5F5F;">
+                        {{message.name}}
+                    </div>
+                </div>
+                <div flex-order = "1"
+                     style="background-color: white; padding: 10px; border-radius: 5px;"
+                     layout-fill>
+                    {{message.text}}
+                </div>
+            </md-list-item>
+        </md-list>
+    </md-content>
+</div>
+<form layout="row" style="padding: 20px;" ng-submit="sendMessage()" autocomplete="off">
+    <md-input-container flex layout-align="center" layout-fill>
+        <label>Digite sua mensagem</label>
+        <input type="text" ng-model="message.myMessage"></input>
+    </md-input-container>
+</form>
