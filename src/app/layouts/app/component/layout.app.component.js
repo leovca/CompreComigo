@@ -4,17 +4,16 @@ export const LayoutAppComponent  = {
     template: require('./layout.app.component.html'),
     controllerAs: 'vm',
     controller: class LayoutAppComponent {
-        constructor($mdSidenav) {
+        constructor($mdSidenav, $mdMedia) {
             'ngInject';
             this.$mdSidenav = $mdSidenav;
-            this.toggleLeft = this.buildToggler('left');
-            this.toggleRight = this.buildToggler('right');
+            this.$mdMedia = $mdMedia;
+
+            this.toggleSidenav = this.buildToggler('left');
         }
 
         buildToggler(componentId) {
-            return function() {
-                this.$mdSidenav(componentId).toggle();
-            };
+            return () =>  this.$mdSidenav(componentId).toggle();
         }
     }
 };

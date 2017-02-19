@@ -1,7 +1,15 @@
 export class ProfileService {
 
-    constructor(){
-
+    constructor(FirebaseService, $q){
+        this.firebaseService = FirebaseService;
+        this.$q = $q;
     }
+
+    getUserProfile(){
+        let defer = this.$q.defer();
+        defer.resolve(this.firebaseService.auth.currentUser);
+        return defer.promise;
+    }
+
 
 }

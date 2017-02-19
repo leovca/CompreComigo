@@ -1,0 +1,33 @@
+<md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2"
+            md-component-id="left">
+
+    <md-toolbar class="md-tall md-hue-2">
+        <span flex></span>
+        <div layout="column" class="md-toolbar-tools-bottom inset">
+            <user-avatar></user-avatar>
+            <span></span>
+            <div>{{vm.user.name}}</div>
+            <div>{{vm.user.email}}</div>
+        </div>
+    </md-toolbar>
+
+    <md-list ng-click="vm.toggleSidenav()">
+        <md-list-item class="md-2-line" ui-sref="modules.profile.edit">
+            <md-item-content md-ink-ripple layout="row" layout-align="start center">
+                <div class="inset">
+                    <md-icon><i class="material-icons">face</i></md-icon>
+                </div>
+                <div class="inset">Profile</div>
+            </md-item-content>
+        </md-list-item>
+
+        <md-list-item class="md-2-line" ui-sref="login">
+            <md-item-content md-ink-ripple layout="row" layout-align="start center">
+                <div class="inset">
+                    <md-icon><i class="material-icons">exit_to_app</i></md-icon>
+                </div>
+                <div class="inset">Sair</div>
+            </md-item-content>
+        </md-list-item>
+    </md-list>
+</md-sidenav>

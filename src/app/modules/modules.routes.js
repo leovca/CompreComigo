@@ -4,6 +4,14 @@ export default function routing(RouterHelper) {
         config: {
             abstract: true,
             parent: 'app',
+            views: {
+                'sidenav': {
+                    component: 'sidenavLayoutAppComponent'
+                },
+                '': {
+                    layout:'<ui-view></ui-view>'
+                }
+            },
             resolve: {
                 auth: (FirebaseService, $state, $q) => {
                     let deferred = $q.defer();
